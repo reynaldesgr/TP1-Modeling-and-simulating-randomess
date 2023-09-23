@@ -80,7 +80,7 @@ void displayDiceArray(unsigned int * dice, int max)
 
 double calculateMean(unsigned int * array, int size)
 {
-    int sum;
+    int sum = 0;
 
     for (int i = 0; i < size; i++)
     {
@@ -92,29 +92,63 @@ double calculateMean(unsigned int * array, int size)
 }
 
 /**
- * @brief Calcule the deviation of simulation's values.
+ * @brief Calcule the standard deviation of simulation's values.
  * 
- * @param array Values of a simulation
+ * @param diceArray Values of a simulation
  * @param size Size of the simulation/Number of experiments
  * @param mean Mean of simulation's values
  * 
- * @return Deviation of simulation's values
+ * @return Standard deviation of simulation's values
  * 
 */
 
-double calculateDeviation(unsigned int * array, int size, double mean)
+double calculateStandardDeviation(unsigned int * diceArray, int size, double mean)
 {
+    double diff;
     double sumSquare = 0.0;
 
     for (int i = 0; i < size; i++)
     {
-        double diff = array[i] - mean;
+        diff = diceArray[i] - mean;
         sumSquare  += diff * diff;
     }
     
     return sqrt(sumSquare / size);
 }
 
+/**
+ * @brief Find the face that appears the most for a dice simulation.
+ *
+ * @param diceArray Values of a simulation
+ * @param size Size of the simulation/Number of experiments
+ *
+ * @return The face number that appears the most during a simulation represented by diceArray
+*/
+
+int maxFaceValueApparition(int * diceArray, int size)
+{
+    if (size <= 0)
+    {
+        return -1;
+    }
+    else
+    {
+        int max;
+
+        max = 0;
+
+        for (int i = 1; i < size; i++)
+        {
+            if (diceArray[i] > diceArray[max])
+            {
+                max = i;
+            }
+        }
+
+        return max + 1;
+    }
+
+}
 int main()
 {
     unsigned int coin;
@@ -123,10 +157,10 @@ int main()
     unsigned int face;
 
     double       meanDice6;
-    double       deviationDice6;
+    double       stdDeviationDice6;
 
     double       meanDice10;
-    double       deviationDice10;
+    double       stdDeviationDice10;
 
     unsigned int dice6[7]   = {0};
     unsigned int dice10[11] = {0};
@@ -160,11 +194,12 @@ int main()
     } 
     displayDiceArray(dice6, MAX6);
 
-    meanDice6      = calculateMean(dice6, 7);
-    deviationDice6 = calculateDeviation(dice6, 7, meanDice6);
+    meanDice6         = calculateMean(dice6, 7);
+    stdDeviationDice6 = calculateStandardDeviation(dice6, 7, meanDice6);
 
     printf("Mean of 6-Dice simulation : %.4f\n", meanDice6);
-    printf("Deviation of 6-Dice simulation : %.4f\n", deviationDice6);
+    printf("Deviation of 6-Dice simulation : %.4f\n", stdDeviationDice6);
+    printf("Face that appears the most frequently : %d\n", maxFaceValueApparition(dice6, 7));
 
     
     printf("\n--- 10-Dice Simulation ---\n");
@@ -177,11 +212,12 @@ int main()
     } 
     displayDiceArray(dice10, MAX10);
 
-    meanDice10      = calculateMean(dice10, 11);
-    deviationDice10 = calculateDeviation(dice10, 11, meanDice10);
+    meanDice10         = calculateMean(dice10, 11);
+    stdDeviationDice10 = calculateStandardDeviation(dice10, 11, meanDice10);
 
     printf("Mean of 10-Dice simulation : %.4f\n", meanDice10);
-    printf("Deviation of 10-Dice simulation : %.4f\n", deviationDice10);
+    printf("Deviation of 10-Dice simulation : %.4f\n", stdDeviationDice10);
+     printf("Face that appears the most frequently : %d\n", maxFaceValueApparition(dice10, 11));
 
     return 0;
 }
