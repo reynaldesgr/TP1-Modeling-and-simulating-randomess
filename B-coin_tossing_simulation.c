@@ -217,7 +217,7 @@ int main()
 
     printf("Mean of 10-Dice simulation : %.4f\n", meanDice10);
     printf("Deviation of 10-Dice simulation : %.4f\n", stdDeviationDice10);
-     printf("Face that appears the most frequently : %d\n", maxFaceValueApparition(dice10, 11));
+    printf("Face that appears the most frequently : %d\n", maxFaceValueApparition(dice10, 11));
 
     return 0;
 }
