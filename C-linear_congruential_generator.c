@@ -17,7 +17,7 @@ unsigned long int m = 16;
 unsigned long int seed = 5;
 
 
-// Constantes Knurth & Lewis (Wikipedia)
+// Knurth & Lewis (Wikipedia)
 
 /*
 unsigned long int a = 1664525;
@@ -30,6 +30,7 @@ unsigned long int m = 4294967296; // 2^32
  *
  * @return A pseudo-random number (seed)
 */
+
 unsigned long int intRand()
 {
     seed = (a * seed + c) % m;
@@ -43,6 +44,7 @@ unsigned long int intRand()
  *
  * @return A pseudo-random number (seed)
 */
+
 float floatRand()
 {
     seed = (a * seed + c) % m;

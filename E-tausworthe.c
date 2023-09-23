@@ -11,11 +11,16 @@
 
 #define MAX 100
 
-uint8_t seed = 0b0110;
+#define MASK_XOR_1  0b1000
+#define MASK_XOR_0  0b0111
+
+// Example of C3 - Modeling Randomness part 1 - diapositive 25
+uint8_t seed = 0b1010;
 
 /**
  * @brief This function display a decimal number into its binary form.
 */
+
 void printBinary(uint8_t decimalNumber)
 {
     int i;
@@ -38,6 +43,7 @@ void printBinary(uint8_t decimalNumber)
  * 
  * @return A generated pseudo-random number
 */
+
 uint8_t tausworthe (uint8_t seed)
 {
     uint8_t bit1;
@@ -56,7 +62,10 @@ uint8_t tausworthe (uint8_t seed)
     
     if (xorbit)
     {
-        seed = seed | 0b1000;
+        seed = seed | MASK_XOR_1;
+    }else
+    {
+        seed = seed & MASK_XOR_0;
     }
 
     return seed;

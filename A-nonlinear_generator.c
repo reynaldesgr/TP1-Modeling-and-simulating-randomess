@@ -6,6 +6,7 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * @brief This function implements the mathematical function square : f(x) -> x^2.
@@ -31,6 +32,7 @@ unsigned int square(unsigned int number)
  *
  * @return A pseudorandom number
 */
+
 unsigned int middleSquareRandom(unsigned int squareNumber)
 {   
     unsigned int randomNumber;
@@ -44,12 +46,28 @@ unsigned int middleSquareRandom(unsigned int squareNumber)
 /**
  * @brief This function test the middleSquareRandom function.
     a certain number of times from a seed given as a parameter.
+    Additional/Personal adding : detection of a cycle in the 
+    pseudo-random generation
  *
  * @param seed Seed used to generate the pseudo-random number
 */
-void test(unsigned int seed)
+
+int test(unsigned int seed)
 {
     unsigned int squareNumber;
+
+    // Cycles detection
+    int isCycleDetected;
+    unsigned int * generatedValues = malloc(RUNS * sizeof(unsigned int));
+    
+    // Memory allocation error
+    if (NULL == generatedValues)
+    {
+        return -1;
+    }
+
+    // Boolean variables checking if a cycle is detected
+    isCycleDetected = 0;
     
     printf("\n Seed : %d \n", seed);
     for (int i = 0; i < RUNS; i++)
@@ -59,7 +77,23 @@ void test(unsigned int seed)
         printf("%08d \n", squareNumber);
         printf("N %d : %u  \n", i, seed);
         
-        seed = middleSquareRandom(squareNumber);
+        // Check if there is a cycle in the generation
+        if (!isCycleDetected)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                if (generatedValues[j] == squareNumber)
+                {
+                    printf("! -- Cycle after %d generations -- !\n", i);
+                    isCycleDetected = 1;
+                    free(generatedValues);
+                    break;
+                }
+            }
+        }
+
+        generatedValues[i]  = squareNumber;
+        seed                = middleSquareRandom(squareNumber);
     }
 }
 
