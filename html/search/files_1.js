@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_5fcongruential_5fgenerator_2ec_17',['linear_congruential_generator.c',['../linear__congruential__generator_8c.html',1,'']]]
+  ['b_2dcoin_5ftossing_5fsimulation_2ec_22',['B-coin_tossing_simulation.c',['../B-coin__tossing__simulation_8c.html',1,'']]]
 ];

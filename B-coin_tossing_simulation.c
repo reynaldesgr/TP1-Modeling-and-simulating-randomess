@@ -1,5 +1,5 @@
 /**
- * @file coin_tossing_simulation.c
+ * @file B-coin_tossing_simulation.c
  * @brief This file contains tossing simulation using rand() and
     test the equidistribution of these experiments (runs)
 */

@@ -1,5 +1,5 @@
 /**
- * @file tausworthe.c
+ * @file E-tausworthe.c
  * @brief This files implements the Tausworthe method for generating pseudo-random numbers.
     The Tausworthe Generator is a multiplicative recursive generator which produces
     random bits. The theory behind the Tausworthe Generators is related to irreducible polynomials.
@@ -55,7 +55,7 @@ uint8_t tausworthe (uint8_t seed)
     xorbit      = bit1 ^ bit2;
     seed        = seed >> 1;
 
-    /** Aftr a right shift, there is two cases :
+    /** After a right shift, there is two cases :
      * if xorbit = 1 : do a mask with 0b1000 = 8
      * else : we can do a mash with 0b0111 = 7
     */

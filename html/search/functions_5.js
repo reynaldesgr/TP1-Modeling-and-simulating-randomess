@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['tausworthe_28',['tausworthe',['../tausworthe_8c.html#a904886761afe69dbd19b5e6912d6cfcb',1,'tausworthe.c']]],
-  ['test_29',['test',['../nonlinear__generator_8c.html#ab2aa612722103a0e23ed363181d74748',1,'nonlinear_generator.c']]]
+  ['printbinary_35',['printBinary',['../E-tausworthe_8c.html#ab36163f8e98906c29079988230765c70',1,'E-tausworthe.c']]]
 ];

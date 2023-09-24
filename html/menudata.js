@@ -21,5 +21,11 @@ with this program; if not, write to the Free Software Foundation, Inc.,
 for the JavaScript code in this file
 */
 var menudata={children:[
-{text:"Page principale",url:"index.html"},
-{text:"Pages associées",url:"pages.html"}]}
+{text:"Main Page",url:"index.html"},
+{text:"Related Pages",url:"pages.html"},
+{text:"Files",url:"files.html",children:[
+{text:"File List",url:"files.html"},
+{text:"File Members",url:"globals.html",children:[
+{text:"All",url:"globals.html"},
+{text:"Functions",url:"globals_func.html"},
+{text:"Macros",url:"globals_defs.html"}]}]}]}

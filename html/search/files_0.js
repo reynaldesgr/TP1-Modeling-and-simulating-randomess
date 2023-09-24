@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['coin_5ftossing_5fsimulation_2ec_16',['coin_tossing_simulation.c',['../coin__tossing__simulation_8c.html',1,'']]]
+  ['a_2dnonlinear_5fgenerator_2ec_21',['A-nonlinear_generator.c',['../A-nonlinear__generator_8c.html',1,'']]]
 ];

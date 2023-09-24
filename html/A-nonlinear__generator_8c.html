@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: nonlinear_generator.c File Reference</title>
+<title>My Project: A-nonlinear_generator.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -65,23 +65,24 @@ $(function() {
 <a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">nonlinear_generator.c File Reference</div>  </div>
+<div class="title">A-nonlinear_generator.c File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p>This file contains functions for a nonlinear random number generator.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
-Include dependency graph for nonlinear_generator.c:</div>
+Include dependency graph for A-nonlinear_generator.c:</div>
 <div class="dyncontent">
-<div class="center"><img src="nonlinear__generator_8c__incl.png" border="0" usemap="#nonlinear__generator_8c" alt=""/></div>
+<div class="center"><img src="A-nonlinear__generator_8c__incl.png" border="0" usemap="#A-nonlinear__generator_8c" alt=""/></div>
 </div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a78ca0560f6177e029df77ef91a609d50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nonlinear__generator_8c.html#a78ca0560f6177e029df77ef91a609d50">RUNS</a>&#160;&#160;&#160;40</td></tr>
-<tr class="memdesc:a78ca0560f6177e029df77ef91a609d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function implements the mathematical function square : f(x) -&gt; x^2.  <a href="nonlinear__generator_8c.html#a78ca0560f6177e029df77ef91a609d50">More...</a><br /></td></tr>
+<tr class="memitem:a78ca0560f6177e029df77ef91a609d50"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="A-nonlinear__generator_8c.html#a78ca0560f6177e029df77ef91a609d50">RUNS</a>&#160;&#160;&#160;40</td></tr>
+<tr class="memdesc:a78ca0560f6177e029df77ef91a609d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function implements the mathematical function square : f(x) -&gt; x^2.  <a href="A-nonlinear__generator_8c.html#a78ca0560f6177e029df77ef91a609d50">More...</a><br /></td></tr>
 <tr class="separator:a78ca0560f6177e029df77ef91a609d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -89,12 +90,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ac50b35c89980d26d37ce270a72048660"><td class="memItemLeft" align="right" valign="top"><a id="ac50b35c89980d26d37ce270a72048660"></a>
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>square</b> (unsigned int number)</td></tr>
 <tr class="separator:ac50b35c89980d26d37ce270a72048660"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a724f68a307700fd54120018d3654323e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nonlinear__generator_8c.html#a724f68a307700fd54120018d3654323e">middleSquareRandom</a> (unsigned int squareNumber)</td></tr>
-<tr class="memdesc:a724f68a307700fd54120018d3654323e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function implements the middle-square method. The middle-square method generates pseudorandom numbers. An n-digit starting value is created and squared, producing a 2n-digit number.  <a href="nonlinear__generator_8c.html#a724f68a307700fd54120018d3654323e">More...</a><br /></td></tr>
+<tr class="memitem:a724f68a307700fd54120018d3654323e"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="A-nonlinear__generator_8c.html#a724f68a307700fd54120018d3654323e">middleSquareRandom</a> (unsigned int squareNumber)</td></tr>
+<tr class="memdesc:a724f68a307700fd54120018d3654323e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function implements the middle-square method. The middle-square method generates pseudorandom numbers. An n-digit starting value is created and squared, producing a 2n-digit number.  <a href="A-nonlinear__generator_8c.html#a724f68a307700fd54120018d3654323e">More...</a><br /></td></tr>
 <tr class="separator:a724f68a307700fd54120018d3654323e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2aa612722103a0e23ed363181d74748"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="nonlinear__generator_8c.html#ab2aa612722103a0e23ed363181d74748">test</a> (unsigned int seed)</td></tr>
-<tr class="memdesc:ab2aa612722103a0e23ed363181d74748"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function test the middleSquareRandom function. a certain number of times from a seed given as a parameter.  <a href="nonlinear__generator_8c.html#ab2aa612722103a0e23ed363181d74748">More...</a><br /></td></tr>
-<tr class="separator:ab2aa612722103a0e23ed363181d74748"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b6172ab124376c57645900fdd6cb2dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="A-nonlinear__generator_8c.html#a4b6172ab124376c57645900fdd6cb2dd">test</a> (unsigned int seed)</td></tr>
+<tr class="memdesc:a4b6172ab124376c57645900fdd6cb2dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function test the middleSquareRandom function. a certain number of times from a seed given as a parameter. Additional/Personal adding : detection of a cycle in the pseudo-random generation.  <a href="A-nonlinear__generator_8c.html#a4b6172ab124376c57645900fdd6cb2dd">More...</a><br /></td></tr>
+<tr class="separator:a4b6172ab124376c57645900fdd6cb2dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top"><a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,14 +155,14 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
 
 </div>
 </div>
-<a id="ab2aa612722103a0e23ed363181d74748"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2aa612722103a0e23ed363181d74748">&#9670;&nbsp;</a></span>test()</h2>
+<a id="a4b6172ab124376c57645900fdd6cb2dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b6172ab124376c57645900fdd6cb2dd">&#9670;&nbsp;</a></span>test()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void test </td>
+          <td class="memname">int test </td>
           <td>(</td>
           <td class="paramtype">unsigned int&#160;</td>
           <td class="paramname"><em>seed</em></td><td>)</td>
@@ -170,7 +171,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>main</b> ()</td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>This function test the middleSquareRandom function. a certain number of times from a seed given as a parameter. </p>
+<p>This function test the middleSquareRandom function. a certain number of times from a seed given as a parameter. Additional/Personal adding : detection of a cycle in the pseudo-random generation. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">seed</td><td>Seed used to generate the pseudo-random number </td></tr>

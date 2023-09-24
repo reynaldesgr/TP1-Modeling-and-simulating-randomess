@@ -1,5 +1,5 @@
 /**
- * @file linear_congruential_generator.c
+ * @file C-linear_congruential_generator.c
  * @brief This file implements a Linear Congruential Generator.
     A linear congruential generator (LCG) is an algorithm that yields a sequence
     of pseudo-randomized numbers calculed with a discontinuous picewise linear equation.

@@ -1,5 +1,5 @@
 /**
- * @file nonlinear_generator.c
+ * @file A-nonlinear_generator.c
  * @brief This file contains functions for a nonlinear random number generator.
  *
  * This file implements a nonlinear random approach using the middle-square method.

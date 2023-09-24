@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nonlinear_5fgenerator_2ec_18',['nonlinear_generator.c',['../nonlinear__generator_8c.html',1,'']]]
+  ['c_2dlinear_5fcongruential_5fgenerator_2ec_23',['C-linear_congruential_generator.c',['../C-linear__congruential__generator_8c.html',1,'']]]
 ];

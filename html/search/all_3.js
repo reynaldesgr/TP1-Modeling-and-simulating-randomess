@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['intrand_6',['intRand',['../linear__congruential__generator_8c.html#a5ab11f0874ebd0852163d4565019dee1',1,'linear_congruential_generator.c']]]
+  ['displaydicearray_5',['displayDiceArray',['../B-coin__tossing__simulation_8c.html#a5ae6efa073ce4ab081ff6f28919bdc7e',1,'B-coin_tossing_simulation.c']]],
+  ['doaflipcoin_6',['doAFlipCoin',['../B-coin__tossing__simulation_8c.html#ae1b697b13406eea4b1370f5cff746a54',1,'B-coin_tossing_simulation.c']]],
+  ['doaflipdice10_7',['doAFlipDice10',['../B-coin__tossing__simulation_8c.html#a943e668840bd5aec872821aa74bc9c08',1,'B-coin_tossing_simulation.c']]],
+  ['doaflipdice6_8',['doAFlipDice6',['../B-coin__tossing__simulation_8c.html#ab751c345e252466583fa314eba14664d',1,'B-coin_tossing_simulation.c']]]
 ];

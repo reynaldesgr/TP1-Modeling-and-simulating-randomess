@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['middlesquarerandom_8',['middleSquareRandom',['../nonlinear__generator_8c.html#a724f68a307700fd54120018d3654323e',1,'nonlinear_generator.c']]]
+  ['floatrand_10',['floatRand',['../C-linear__congruential__generator_8c.html#ad2d8b89f21c241868b833e6228a4ed13',1,'C-linear_congruential_generator.c']]]
 ];

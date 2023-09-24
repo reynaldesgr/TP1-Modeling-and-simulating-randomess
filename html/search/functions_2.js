@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['intrand_25',['intRand',['../linear__congruential__generator_8c.html#a5ab11f0874ebd0852163d4565019dee1',1,'linear_congruential_generator.c']]]
+  ['floatrand_31',['floatRand',['../C-linear__congruential__generator_8c.html#ad2d8b89f21c241868b833e6228a4ed13',1,'C-linear_congruential_generator.c']]]
 ];

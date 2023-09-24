@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['welcome_20to_20my_20project_20documentation_1',['Welcome to My Project Documentation',['../md_mainpage.html',1,'']]]
+  ['b_2dcoin_5ftossing_5fsimulation_2ec_1',['B-coin_tossing_simulation.c',['../B-coin__tossing__simulation_8c.html',1,'']]]
 ];
