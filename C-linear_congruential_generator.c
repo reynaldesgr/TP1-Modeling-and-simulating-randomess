@@ -8,6 +8,7 @@
 */
 
 #include <stdio.h>
+#include <stdlib.h>
 
 unsigned long int a = 5;
 unsigned long int c = 1;
@@ -17,12 +18,15 @@ unsigned long int m = 16;
 unsigned long int seed = 5;
 
 
-// Knurth & Lewis (Wikipedia)
-
+/**
+ *  For Question 8 : Test with Park-Miller LCG (Wikipedia)
+ * Comment the constants (a, c, m) below and uncommented these ones
 /*
-unsigned long int a = 1664525;
-unsigned long int c = 1013904223;
-unsigned long int m = 4294967296; // 2^32
+
+unsigned long int a = 16807;
+unsigned long int c = 0;
+unsigned long int m = 2147483647; // 2^31 - 1
+
 */
 
 /**
@@ -52,11 +56,14 @@ float floatRand()
     return (float) seed/16;  
 }
 
-int main()
+
+/**
+ * @brief Testing function for intRand()
+*/
+
+void testIntRand()
 {
     unsigned long int   res;
-             float      resf;
-
     printf("\nintRand() \t \n");
     for (int i = 0; i < 32; i++)
     {
@@ -64,12 +71,47 @@ int main()
         printf("%d : %lu \n", i+1, res);
     }
 
+}
+
+/**
+ * @brief Testing function for floatRand()
+*/
+
+void testFloatRand()
+{
+    float res;
     printf("\nfloatRand() \t \n");
     for (int i = 0; i < 32; i++)
     {
-        resf = floatRand();
-        printf("%d : %.4f \n", i+1, resf);
+        res = floatRand();
+        printf("%d : %.4f \n", i+1, res);
     }
+}
+
+int main()
+{
+    printf("\n -- Seed = 5 -- \n");    
+    testIntRand();
+    testFloatRand();
+
+    // Different seeds
+    seed = 189;
+
+    printf("\n -- Seed = 189 -- \n");
+    testIntRand();
+    testFloatRand();
+
+    seed = 0;
+
+    printf("\n -- Seed = 0 -- \n");
+    testIntRand();
+    testFloatRand();
+
+    seed = RAND_MAX;
+
+    printf("\n -- Seed = RAND_MAX -- \n");
+    testIntRand();
+    testFloatRand();
 
     return 0;
 }

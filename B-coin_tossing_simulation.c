@@ -11,7 +11,9 @@
 #define MAX6  6
 #define MAX10 10 
 
-#define LIMIT_RUNS 100
+// I changed LIMIT_RUNS for question 5) & 6)
+// Tested with 10, 100, 1000, 1000000
+#define LIMIT_RUNS 1000
 
 /**
  * @brief Simulates flipping a coin.
